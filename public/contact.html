@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fale Connosco</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: sans-serif; background: #f4f6f8; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; }
+    .card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); width: 100%; max-width: 350px; text-align: center; }
+    input, textarea { width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
+    button { width: 100%; padding: 12px; background: #d11d28; color: white; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; }
+    button:hover { background: #b01822; }
+    button:disabled { background: #cccccc; cursor: not-allowed; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="logo.png" alt="Logo" style="width: 100px; margin-bottom: 20px;">
+    <h2>Fale Connosco</h2>
+    
+    <form id="submit-to-google-sheet">
+      <input type="text" name="name" placeholder="Nome" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" rows="4" placeholder="Mensagem..." required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+  <script>
+    // -------------------------------------------------------------------
+    // ⚠️ PASTE YOUR GOOGLE WEB APP URL BELOW (Keep the quotes!)
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwKJM23lJDdUv8XMgKxO6oODmav3kXMeDHoVUQcCByGIR27qg3aIfx4-tFDkIl3rnMM/exec'; 
+    // -------------------------------------------------------------------
+
+    const form = document.forms['submit-to-google-sheet'];
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const submitButton = form.querySelector('button[type="submit"]');
+      const originalText = submitButton.innerText;
+      
+      submitButton.innerText = "A Enviar...";
+      submitButton.disabled = true;
+
+      fetch(scriptURL, { method: 'POST', body: new FormData(form), mode: 'no-cors'})
+        .then(response => {
+          alert("Sucesso! Entraremos em contacto.");
+          form.reset();
+          submitButton.innerText = originalText;
+          submitButton.disabled = false;
+        })
+        .catch(error => {
+          console.error('Error!', error.message);
+          alert("Erro. Verifique a internet.");
+          submitButton.innerText = originalText;
+          submitButton.disabled = false;
+        });
+    });
+  </script>
+</body>
+</html> 
