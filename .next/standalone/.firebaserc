@@ -1,0 +1,18 @@
+{
+  "projects": {
+    "default": "studio-9617329234"
+  },
+  "targets": {
+    "studio-9617329234": {
+      "hosting": {
+        "home": [
+          "home-page-gustavo"
+        ],
+        "formulario": [
+          "studio-9617329234-e1864"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

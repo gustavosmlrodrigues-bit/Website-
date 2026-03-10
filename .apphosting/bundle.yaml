@@ -1,0 +1,12 @@
+version: v1
+runConfig:
+  runCommand: node .next/standalone/server.js
+metadata:
+  adapterPackageName: "@apphosting/adapter-nextjs"
+  adapterVersion: 14.0.20
+  framework: nextjs
+  frameworkVersion: 15.3.3
+outputFiles:
+  serverApp:
+    include:
+      - .next/standalone

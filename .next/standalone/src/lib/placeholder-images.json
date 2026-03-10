@@ -1,0 +1,32 @@
+{
+  "services": [
+    {
+      "title": "PREPARAÇÃO DO IMÓVEL",
+      "description": "Garanto uma apresentação irrepreensível do seu imóvel. Cuido de todas as validações legais e documentais com apoio especializado, defino a melhor estratégia de preço através de uma análise de mercado aprofundada e produzo uma reportagem fotográfica e vídeo profissional, complementada com 'home staging' para valorizar o espaço.",
+      "image": "https://picsum.photos/seed/prep/600/400",
+      "hint": "house interior"
+    },
+    {
+      "title": "PROMOÇÃO COM IA",
+      "description": "Elaboro um plano de marketing e promoção, validando todas as ações consigo (campanhas, 'open house', etc.). Gero descrições profissionais e otimizadas com I.A., utilizando esta tecnologia em todo o processo — do marketing à análise de mercado — para garantir a máxima exposição, o preço certo e o melhor acompanhamento.",
+      "image": "https://picsum.photos/seed/ai/600/400",
+      "hint": "abstract technology"
+    },
+    {
+      "title": "GESTÃO COMERCIAL",
+      "description": "Assumo toda a gestão comercial: crio uma base de dados de interessados, qualifico a sua motivação e capacidade de compra com parceiros de crédito, e valido o 'match' com o imóvel. Trato do agendamento de visitas, do reporting de ações e proponho melhorias, garantindo um processo transparente e sem stress para si.",
+      "image": "https://picsum.photos/seed/management/600/400",
+      "hint": "office paperwork"
+    },
+    {
+      "title": "FECHO DO NEGÓCIO",
+      "description": "Acompanho-o pessoalmente em todas as fases do fecho do negócio. Lidero a negociação, gerindo as expectativas e defendendo os seus interesses. Facilito o acesso a crédito aos compradores através de parceiros, sem custos, e coordeno todo o processo administrativo até à escritura, garantindo que tudo corre na perfeição.",
+      "image": "https://picsum.photos/seed/deal/600/400",
+      "hint": "handshake keys"
+    }
+  ],
+  "about": {
+    "image": "/Sobremim.png?v=2",
+    "hint": "professional portrait"
+  }
+}
